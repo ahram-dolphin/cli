@@ -1,0 +1,41 @@
+{
+    "name": "@dolphin-dev/cli",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "author": "ahram",
+    "license": "MIT",
+    "bin": {
+        "dp": "bin/dp"
+    },
+    "preferGlobal": true,
+    "scripts": {
+        "start": "node ./lib/cli.js",
+        "test": "jest --colors --watchAll",
+        "build": "babel src -d lib",
+        "prepublish": "npm run build"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "commander": "^9.4.0",
+        "enquirer": "^2.3.6",
+        "jest": "^28.1.3"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.18.10",
+        "@babel/preset-env": "^7.18.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ahram-dolphin/cli.git"
+    },
+    "homepage": "https://github.com/ahram-dolphin/cli.git",
+    "keywords": [
+        "react cli",
+        "react",
+        "react-cli",
+        "react generator",
+        "react generate"
+    ]
+}
