@@ -5,7 +5,7 @@ const program = new Command();
 
 program
     .name('귀차니즘들을 위한 리액트 CLI')
-    .version('0.0.1');
+    .version('1.0.1');
 
 program
     .command('generate')

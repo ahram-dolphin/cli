@@ -5,5 +5,6 @@ export const constant = ({ name }) => {
     
     return `const ${constName} = {};
 
-export default ${constName};`
+export default ${constName};
+`
 }

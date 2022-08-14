@@ -1,10 +1,10 @@
 import { toPascal } from "../../../utils/notation"
 
 export const component = ({ name, hasChildren, useScssModule }) => {
-    return `${hasChildren ? `import { PropsWithChildren } from "react";
+    return `${hasChildren ? `import { PropsWithChildren } from 'react';
 ` : ''}
-${useScssModule ? `import styles from './${name}.module.scss;` : ''}
-
+${useScssModule ? `import styles from './${name}.module.scss;'
+` : ''}
 interface ${name}Props {}
 
 export default function ${name}({}: ${hasChildren ? `PropsWithChildren<${name}Props>` : `${name}Props`}) {
@@ -15,7 +15,8 @@ export default function ${name}({}: ${hasChildren ? `PropsWithChildren<${name}Pr
 export const index = ({ name }) => {
     return `import ${name} from './${name}';
 
-export default ${name};`
+export default ${name};
+`
 }
 
 export const storybook = ({ name, path }) => {

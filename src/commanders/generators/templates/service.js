@@ -1,3 +1,4 @@
 export const service = () => {
-    return `export const init = () => {};`
+    return `export const init = () => {};
+`;
 }
