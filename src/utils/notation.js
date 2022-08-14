@@ -1,5 +1,6 @@
 export const toPascal = (name) => {
     return name
+        .replace(/([a-z])([A-Z])/g, "$1-$2")
         .replace(
             /\w+/g, 
             (w) => w[0].toUpperCase() + w.slice(1).toLowerCase()

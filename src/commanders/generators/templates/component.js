@@ -19,6 +19,9 @@ export default ${name};`
 }
 
 export const storybook = ({ name, path }) => {
+    if (path.includes('src/'))
+        path = path.slice(path.indexOf('src/') + 4);
+
     const storybookPath = path
         .split('/')
         .map((e, i) => i === 0 ? e.toUpperCase() : toPascal(e))
@@ -27,10 +30,10 @@ export const storybook = ({ name, path }) => {
     return `import { ComponentStory, Meta } from '@storybook/react';
 
 import ${name} from './index';
-    
+
 export default {
-    component: ${name},
-    title: '${storybookPath}',
+  component: ${name},
+  title: '${storybookPath}',
 } as Meta;
 
 const Template: ComponentStory<typeof ${name}> = (args) => <${name} {...args} />;

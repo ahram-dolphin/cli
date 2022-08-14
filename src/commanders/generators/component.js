@@ -4,7 +4,7 @@ import { getTemplate } from './templates';
 const FILES = [
     { name: '{name}.tsx', type: 'component' },
     { name: '{name}.stories.tsx', type: 'storybook' },
-    { name: '{name}.modules.scss', type: 'scss-module' },
+    { name: '{name}.module.scss', type: 'scss-module' },
     { name: `index.tsx`, type: 'index' }
 ];
 
